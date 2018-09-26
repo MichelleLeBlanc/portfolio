@@ -1,4 +1,105 @@
-.bobby {
-  color: #f00;
-
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
+
+.grid {
+  display: grid;
+  grid: auto repeat(4, 100%) 80px/100%;
+  grid-template-areas: "nav" "int" "skl" "pfo" "cct" "ftr";
+  grid-gap: 10px;
+  min-height: 100vh;
+}
+
+.nav {
+  grid-area: nav;
+  border: 1px solid gray;
+}
+.nav-item {
+  margin: 10px;
+}
+.nav-grid {
+  color: red;
+  display: grid;
+  grid: auto/repeat(4, auto);
+  justify-content: center;
+}
+
+.intro {
+  grid-area: int;
+  display: grid;
+  grid: 100%/1fr 1fr;
+  border: 1px solid red;
+  justify-items: end;
+}
+
+.skills {
+  grid-area: skl;
+  border: 1px solid green;
+}
+.skills-grid {
+  display: grid;
+  grid: auto/1fr 1fr 1fr;
+  justify-content: center;
+}
+@media only screen and (max-width: 750px) {
+  .skills-grid {
+    grid: auto auto auto/auto;
+  }
+}
+.skills-list {
+  height: 500px;
+  border: 1px solid green;
+}
+@media only screen and (max-width: 750px) {
+  .skills-list {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+.portfolio {
+  grid-area: pfo;
+  border: 1px solid blue;
+}
+.portfolio-grid {
+  display: grid;
+  grid: repeat(2, 200px)/repeat(4, 1fr);
+  grid-gap: 2px;
+}
+@media only screen and (max-width: 600px) {
+  .portfolio-grid {
+    grid: repeat(4, 200px)/repeat(2, 1fr);
+  }
+}
+.portfolio-thumb {
+  border: 1px solid blue;
+}
+
+.connect {
+  grid-area: cct;
+  border: 1px solid purple;
+}
+.connect-grid {
+  display: grid;
+  grid: 300px/400px 100px 100px 100px;
+  justify-content: center;
+}
+@media only screen and (max-width: 750px) {
+  .connect-grid {
+    grid: 300px/1fr 80px 80px 80px;
+    margin: auto 20px;
+  }
+}
+.connect-grid div {
+  border: 1px solid purple;
+}
+
+.footer {
+  grid-area: ftr;
+  border: 1px solid gray;
+}
+
+/*# sourceMappingURL=style.css.map */
