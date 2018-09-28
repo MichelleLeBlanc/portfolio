@@ -1,13 +1,42 @@
+$black: #212121;
+$whitish: #f2efed;
+$purple: #a54399;
+$aqua: #26c1bc;
+$orange: #fc5f20;
+$body-font: 'Open Sans Condensed', sans-serif;
+$header-font: 'Josefin Sans', sans-serif;
+
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $body-font;
+    font-size: 16px;
     margin: 0;
     padding: 0;
-    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+}
+
+// h1 { font-size: 55px; }
+h1 { font-size: 72px; }
+h2 { font-size: 55px; }
+h3 { font-size: 40px; }
+h4 { font-size: 36px; }
+h5 { font-size: 30px; }
+h6 { font-size: 28px; }
+
+small { font-size: 75%;}
+
+section, footer {
+  padding: 20px;
+}
+section.intro {
+  padding: 0;
 }
 
 .grid {
   display: grid;
-  grid: auto repeat(4, 100%) 80px / 100%;
+  grid: auto repeat(4, auto) auto / 100%;
   grid-template-areas:
     "nav"
     "int"
@@ -15,18 +44,22 @@
     "pfo"
     "cct"
     "ftr";
-    grid-gap: 10px;
+    // grid-gap: 10px;
     min-height: 100vh;
 }
 
 .nav {
   grid-area: nav;
-  border: 1px solid gray;
+  background-color: rgba(242, 239, 237, 0.6);
+  color: $black;
+  z-index: 2;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
   &-item {
     margin: 10px;
   }
   &-grid {
-    color: red;
     display: grid;
     grid: auto / repeat(4, auto);
     justify-content: center;
@@ -37,51 +70,95 @@
 .intro {
   grid-area: int;
   display: grid;
-  grid: 100% / 1fr 1fr;
-  border: 1px solid red;
+  grid: 95vh / 1fr;
   justify-items: end;
+  background-color: $aqua;
+  // background: url("/assets/BW-Feather.jpg") top left no-repeat;
+  // background-size: cover;
+  z-index: 1;
+  margin-top: -42px;
+  &-container {
+    //background-color: rgba(0, 0, 0, 0.8);
+  }
+  & h1 {
+    margin: auto;
+    padding-top: 52px;
+    max-width: 65%;
+    color: $whitish;
+    text-align: center;
+  }
+  & p {
+    max-width: 65%;
+    margin: auto;
+    color: $whitish;
+  }
 }
 
 .skills {
   grid-area: skl;
-  border: 1px solid green;
+  background-color: $whitish;
   &-grid {
     display: grid;
     grid: auto / 1fr 1fr 1fr;
-    justify-content: center;
-    @media only screen and (max-width: 750px) {
-      grid: auto auto auto / auto;
-    }
+    //justify-content: center;
+    // @media only screen and (max-width: 750px) {
+    //   grid: auto auto auto / auto;
+    // }
   }
   &-list {
-    height: 500px;
-    border: 1px solid green;
-    @media only screen and (max-width: 750px) {
-      width: 350px;
-      height: 450px;
+    height: 100%;
+    //position: relative;
+    // @media only screen and (max-width: 750px) {
+    //   width: 350px;
+      //height: 450px;
+    //}
+    &-items {
+      background-color: #fff;
+      border: 1px solid #e6e6e6;
+      margin: -75px 10px 20px 10px;
+      padding: 15px 25px 35px 45px;
+      border-radius: 20px;
+      height: 100%;
+      & li {
+        margin-bottom: 8px
+        //line-height: 2;
+      }
     }
+  }
+  &-header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+    margin-left: -20px;
+    color: $orange;
   }
 }
 
 .portfolio {
   grid-area: pfo;
-  border: 1px solid blue;
+  background-color: $purple;
   &-grid {
     display: grid;
     grid: repeat(2, 200px) / repeat(4, 1fr);
-    grid-gap: 2px;
+    grid-gap: 1px;
     @media only screen and (max-width: 600px) {
       grid: repeat(4, 200px) / repeat(2, 1fr);
     }
   }
   &-thumb {
-    border: 1px solid blue;
+    background-color: $whitish;
+  }
+  & h2 {
+    color: $black;
+    text-align: center;
+    margin-bottom: 16px;
   }
 }
 
 .connect {
   grid-area: cct;
-  border: 1px solid purple;
+  background-color: $whitish;
   &-grid {
     display: grid;
     grid: 300px / 400px 100px 100px 100px;
@@ -94,9 +171,16 @@
       border: 1px solid purple;
     }
   }
+  & h2 {
+    color: $aqua;
+    text-align: center;
+    margin-bottom: 16px;
+  }
 }
 
 .footer {
   grid-area: ftr;
-  border: 1px solid gray;
+  background-color: $black;
+  color: $whitish;
+  text-align: center;
 }
