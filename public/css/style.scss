@@ -10,13 +10,16 @@ $header-font: 'Josefin Sans', sans-serif;
     font-family: $body-font;
     font-size: 16px;
     margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
+  margin-top: 40px;
+  margin-bottom: 3px;
 }
+
+p { margin-bottom: 16px;}
 
 // h1 { font-size: 55px; }
 h1 { font-size: 62px; }
@@ -24,7 +27,7 @@ h2 { font-size: 52px; }
 h3 { font-size: 40px; }
 h4 { font-size: 36px; }
 h5 { font-size: 30px; }
-h6 { font-size: 28px; }
+h6 { font-size: 28px; margin-top: 30px;}
 
 small { font-size: 75%;}
 
@@ -33,6 +36,11 @@ section, footer {
 }
 section.intro {
   padding: 0;
+}
+
+.container {
+  max-width: 1350px;
+  margin: auto;
 }
 
 .grid {
@@ -52,13 +60,10 @@ section.intro {
 .nav {
   grid-area: nav;
   background-color: rgba(0,0,0,0.55);
-  z-index: 2;
+  z-index: 1000;
   position: fixed;
   top: 0;
   width: 100%;
-  //   -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
-  //   -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
-  // box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
   &-item {
     margin: 10px;
     color: $whitish;
@@ -80,21 +85,17 @@ section.intro {
   display: grid;
   grid: 95vh / 1fr;
   justify-items: center;
-  background-color: $black;
-  //background: url("/assets/BW-Feather.jpg") top left no-repeat;
-  //background-size: cover;
-  //opacity: 0.1;
-  margin-top: -42px;
+  margin: -42px auto 0 auto;
   &-container {
     align-self: center;
   }
+  &-bg {
+    background-color: $black;
+  }
   &-title {
     margin-top: -75px;
-    //padding-top: 72px;
-    //max-width: 100%;
-    //color: $black;
     text-align: center;
-    background: -webkit-linear-gradient($purple, $purple, $cherry, $cherry );
+    background: -webkit-linear-gradient($purple, $purple, $cherry, $cherry);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
   }
@@ -107,16 +108,17 @@ section.intro {
   }
 }
 
-.skills {
+.skills,
+.vision,
+.white-bg {
   grid-area: skl;
   background-color: $whitish;
   &-grid {
     display: grid;
     grid: auto / 1fr 1fr 1fr;
-    //justify-content: center;
-    // @media only screen and (max-width: 750px) {
-    //   grid: auto auto auto / auto;
-    // }
+  }
+  &-bg {
+    background-color: $whitish;
   }
   &-list {
     height: 100%;
@@ -135,7 +137,6 @@ section.intro {
       position: relative;
       & li {
         margin-bottom: 8px
-        //line-height: 2;
       }
     }
   }
@@ -170,7 +171,9 @@ section.intro {
   }
 }
 
-.connect {
+.connect,
+.arch-code,
+.stats {
   grid-area: cct;
   background-color: $whitish;
   &-grid {
@@ -185,10 +188,13 @@ section.intro {
       border: 1px solid purple;
     }
   }
-  & h2 {
-    color: $cherry;
-    text-align: center;
-    margin-bottom: 16px;
+  &-bg {
+    background-color: $whitish;
+    & h2 {
+      color: $cherry;
+      text-align: center;
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -209,4 +215,167 @@ section.intro {
 #skills {
   position: absolute;
   top: -55px;
+}
+
+//////////////////////// MTC Page ////////////////////
+
+
+.img-1,
+.img-2,
+.img-3,
+.img-4 {
+  // border: 1px solid yellow;
+  & img {
+    width: 100%;
+  }
+}
+.img-1 {
+  grid-area: 1 / 1 / 9 / 9;
+  //grid-column: 1 / 8;
+  z-index: 2;
+}
+.img-2 {
+  grid-area: 3 / 3 / 11 / 11;
+  //grid-column: 4 / 11;
+  z-index: 3;
+}
+.img-3 {
+  //grid-area: 1 / 6 / 10 / 10;
+  //grid-column: 2 / 10;
+  z-index: 4;
+  display: none;
+}
+
+.mt-overview {
+  grid-area: int;
+  display: grid;
+  grid: auto / 50% 50%;
+  padding-top: 62px;
+  padding-bottom: 60px;
+  &-bg {
+    background-color: $black;
+  }
+  &-grid {
+    display: grid;
+    //grid: 100% / repeat(5, 1fr);
+    grid: repeat(10, auto) / repeat(10, 1fr);
+    //border: 1px solid blue;
+    margin-top: 40px;
+  }
+  &-container {
+    padding: 20px 40px;
+    //border: 1px solid red;
+  }
+  &-title {
+    //text-align: center;
+    background: -webkit-linear-gradient($purple, $purple, $cherry, $cherry);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  &-desc {
+    color: $gray;
+  }
+}
+
+.mt-objective {
+  &-title {
+    color: $cherry;
+    margin: 55px 0 5px 0;
+  }
+}
+
+
+
+.mt-vision {
+  &-grid {
+    display: grid;
+    grid: repeat(8, auto) / repeat(5, auto);
+    grid-gap: 30px;
+    margin-bottom: 40px;
+    & div {
+      border: 1px solid blue;
+      width: 100%;
+      min-height: 200px;
+    }
+  }
+  &-title {
+    color: $cherry;
+    margin: 35px 0 15px 0;
+    text-align: center;
+  }
+}
+.taxonomy {
+  grid-area: 1 / 1 / 3 / 3 ;
+  background-color: gray;
+}
+
+.sketches {
+  grid-area: 3 / 1 / 5 / 6 ;
+  background-color: pink;
+}
+
+.styleguide {
+  background-color: gold;
+  grid-area: 1 / 3 / 3 / 6 ;
+}
+
+.ads {
+  background-color: green;
+  grid-area: 5 / 1 / 7 / 3 ;
+}
+
+.mocks {
+  background-color: red;
+  grid-area: 5 / 3 / 9 / 6 ;
+}
+
+.testing {
+  background-color: lightblue;
+  grid-area: 7 / 1 / 9 / 3 ;
+}
+
+.vision-title {
+  grid-area: 1 / 1 / 2 / 4 ;
+  align-content: center;
+}
+
+.dev-life,
+.roles {
+  color: $whitish;
+  & h3 {
+    text-align: center;
+  }
+  & .container {
+    max-width: 700px;
+  }
+}
+
+.dev-life,
+.roles {
+  grid-area: pfo;
+  display: grid;
+  grid: auto / 50% 50%;
+  &-bg {
+    background-color: $black;
+  }
+  &-container {
+    padding: 40px 40px 25px 16px;
+  }
+  &-title {
+    text-align: right;
+    // background: -webkit-linear-gradient($purple, $cherry, $cherry);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    color: $cherry;
+  }
+  &-desc {
+    color: $gray;
+  }
+}
+
+.arch-code,
+.stats {
+  & h2 {
+    text-align: center;
+  }
 }
