@@ -33,6 +33,7 @@ small { font-size: 75%;}
 
 section, footer {
   padding: 20px;
+  min-height: 300px;
 }
 section.intro {
   padding: 0;
@@ -83,7 +84,7 @@ section.intro {
 .intro {
   grid-area: int;
   display: grid;
-  grid: 95vh / 1fr;
+  grid: 75vh / 1fr;
   justify-items: center;
   margin: -42px auto 0 auto;
   &-container {
@@ -106,6 +107,10 @@ section.intro {
     text-align: justify;
     color: $gray;
   }
+}
+.connect2 {
+  text-decoration: none;
+  color: $cherry;
 }
 
 .skills,
@@ -155,20 +160,42 @@ section.intro {
   background-color: $cherry;
   &-grid {
     display: grid;
-    grid: repeat(2, 200px) / repeat(4, 1fr);
+    grid: repeat(2, 200px) / repeat(3, 1fr);
     grid-gap: 1px;
-    @media only screen and (max-width: 600px) {
-      grid: repeat(4, 200px) / repeat(2, 1fr);
-    }
+    // @media only screen and (max-width: 600px) {
+    //   grid: repeat(4, 200px) / repeat(2, 1fr);
+    // }
   }
   &-thumb {
     background-color: $whitish;
+    -webkit-transition: .3 ease-in-out;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    &:hover {
+      background-color: $gray;
+      //opacity: 1;
+    }
   }
   & h2 {
     color: $whitish;
     text-align: center;
     margin-bottom: 16px;
   }
+  & h6 {
+    text-align: center;
+    margin-top: 25%;
+    // opacity: 0;
+    // &:hover {
+    //   opacity: 1;
+    // }
+  }
+  & p {
+    text-align: center;
+    color: $whitish;
+  }
+}
+.mt-casethumb {
+  grid-area: 1 / 1 / 3 / 3;
 }
 
 .connect,
@@ -178,15 +205,16 @@ section.intro {
   background-color: $whitish;
   &-grid {
     display: grid;
-    grid: 300px / 400px 100px 100px 100px;
+    grid: auto / auto auto auto auto;
     justify-content: center;
-    @media only screen and (max-width: 750px) {
-      grid: 300px / 1fr 80px 80px 80px;
-      margin: auto 20px;
-    }
-    & div {
-      border: 1px solid purple;
-    }
+    grid-gap: 16px;
+    // @media only screen and (max-width: 750px) {
+    //   grid: 300px / 1fr 80px 80px 80px;
+    //   margin: auto 20px;
+    // }
+    // & div {
+    //   border: 1px solid purple;
+    // }
   }
   &-bg {
     background-color: $whitish;
@@ -196,6 +224,17 @@ section.intro {
       margin-bottom: 16px;
     }
   }
+  &-icon {
+    width: 42px;
+    height: auto;
+    opacity: 1;
+	    -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
+    margin-bottom: 40px;
+    &:hover {
+      opacity: .5;
+    }
+  }
 }
 
 .footer {
@@ -203,6 +242,7 @@ section.intro {
   background-color: $black;
   color: $gray;
   text-align: center;
+  min-height: 300px;
   & h6 {
     font-size: 16px;
   }
@@ -258,7 +298,7 @@ section.intro {
   &-grid {
     display: grid;
     //grid: 100% / repeat(5, 1fr);
-    grid: repeat(10, auto) / repeat(10, 1fr);
+    grid: repeat(8, auto) / repeat(10, 1fr);
     //border: 1px solid blue;
     margin-top: 40px;
   }
@@ -289,13 +329,13 @@ section.intro {
 .mt-vision {
   &-grid {
     display: grid;
-    grid: repeat(8, auto) / repeat(5, auto);
-    grid-gap: 30px;
+    grid: repeat(14, auto) / repeat(5, 1fr);
+    grid-gap: 50px;
     margin-bottom: 40px;
     & div {
       border: 1px solid blue;
-      width: 100%;
-      min-height: 200px;
+      //width: 100%;
+      //min-height: 200px;
     }
   }
   &-title {
@@ -306,32 +346,138 @@ section.intro {
 }
 .taxonomy {
   grid-area: 1 / 1 / 3 / 3 ;
-  background-color: gray;
+  //background-color: gray;
 }
 
 .sketches {
-  grid-area: 3 / 1 / 5 / 6 ;
+  grid-area: 3 / 1 / 5 / 4 ;
   background-color: pink;
+  &-text {
+    column-count: 2;
+    column-gap: 24px;
+    column-rule: 1px solid lightgray;
+  }
+  &-grid {
+    display: grid;
+    grid: auto / repeat(2, 1fr);
+    grid-gap: 12px;
+  }
 }
 
 .styleguide {
-  background-color: gold;
+  //background-color: gold;
   grid-area: 1 / 3 / 3 / 6 ;
+  &-grid {
+    display: grid;
+    grid: repeat(3, auto) / repeat(6, 77px) 2fr 1fr;
+    //width: auto;
+    //height: 220px;
+    //grid-gap: 12px;
+  }
+  &-text {
+    grid-area: 1 / 1 / 2 / 9 ;
+    column-count: 2;
+    column-gap: 24px;
+    column-rule: 1px solid lightgray;
+  }
+  &-heading {
+    margin-top: 0;
+  }
 }
+
+.mt {
+    &-gold,
+    &-green,
+    &-purple,
+    &-red,
+    &-blue,
+    &-orange {
+    width: 65px;
+    height: 65px;
+    margin: 12px 12px 12px 0;
+
+  }
+}
+.mt {
+    &-gold {
+    background-color: #fdb73b;
+  }
+  &-green {
+    background-color: #25a08c;
+  }
+  &-purple {
+    background-color: #a864a8;
+  }
+  &-red {
+    background-color: #f73a5e;
+  }
+  &-blue {
+    background-color: #0c8ded;
+  }
+  &-orange {
+    background-color: #ff7e27;
+  }
+  &-roboto {
+    font-family: 'Roboto Slab', serif;
+    font-size: 36px;
+  }
+  &-heebo {
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+  }
+  &-fonts {
+    margin-right: 12px;
+  }
+  &-assets {
+    grid-area: 3 / 1 / 4 / 9;
+    padding: 12px 0;
+  }
+  &-button {
+    font-family: 'Heebo', sans-serif;
+    font-size: 18px;
+    padding: 12px 18px;
+    margin-right: 12px;
+    background-color: #25a08c;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    transition: background 0.5s ease-in-out;
+    &:hover {
+      background-color: darken(#25a08c, 10%);
+    }
+    &.back {
+      background-color: #fdb73b;
+      color: #333;
+      &:hover {
+        background-color: darken(#fdb73b, 14%);
+      }
+    }
+  }
+}
+
 
 .ads {
   background-color: green;
-  grid-area: 5 / 1 / 7 / 3 ;
+  grid-area: 3 / 4 / 5 / 6 ;
 }
 
 .mocks {
   background-color: red;
-  grid-area: 5 / 3 / 9 / 6 ;
+  grid-area: 5 / 1 / 12 / 6 ;
+  &-grid {
+    display: grid;
+    grid: auto/ repeat(6, 1fr);
+  }
+  &-text {
+    column-count: 3;
+    column-gap: 24px;
+    column-rule: 1px solid lightgray;
+  }
 }
 
 .testing {
   background-color: lightblue;
-  grid-area: 7 / 1 / 9 / 3 ;
+  grid-area: 12 / 2 / 15 / 5 ;
 }
 
 .vision-title {
