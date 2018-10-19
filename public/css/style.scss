@@ -1,6 +1,7 @@
 $black: #24262d;
-$whitish: #f9f9f9;
+$whitish: #f0f0f0;
 $gray: #8d99ab;
+$light-gray: #d9d9d9;
 $cherry: #ef233c;
 $purple: #7f005f;
 $body-font: 'Open Sans', sans-serif;
@@ -17,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
   margin-top: 40px;
   margin-bottom: 3px;
+  font-weight: 100;
 }
 
 p { margin-bottom: 16px;}
@@ -91,7 +93,15 @@ section.intro {
     align-self: center;
   }
   &-bg {
-    background-color: $black;
+    //background-color: $black;
+    // background-color: rgba(36,38,45,0.95);
+    background-color: rgba(0,0,0,0.85);
+    width: 100%;
+    margin: 0;
+    &-img {
+      // background: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/09/Marble-Freebie-Featured-Image-01.jpg?w=1440&h=960&crop=1");
+      background-image: url("/assets/BW-Texture.jpg");
+    }
   }
   &-title {
     margin-top: -75px;
@@ -134,7 +144,7 @@ section.intro {
     //}
     &-items {
       background-color: #fff;
-      border: 1px solid #e6e6e6;
+      border: 1px solid $light-gray;
       margin: -75px 10px 20px 10px;
       padding: 15px 25px 35px 45px;
       border-radius: 20px;
@@ -148,7 +158,7 @@ section.intro {
   &-header {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $light-gray;
     text-align: center;
     margin-left: -20px;
     color: $cherry;
@@ -158,36 +168,41 @@ section.intro {
 .portfolio {
   grid-area: pfo;
   background-color: $cherry;
+  padding-bottom: 75px;
   &-grid {
     display: grid;
-    grid: repeat(2, 200px) / repeat(3, 1fr);
-    grid-gap: 1px;
+    grid: repeat(2, 250px) / repeat(3, 1fr);
+    grid-gap: 8px;
     // @media only screen and (max-width: 600px) {
     //   grid: repeat(4, 200px) / repeat(2, 1fr);
     // }
   }
   &-thumb {
-    background-color: $whitish;
-    -webkit-transition: .3 ease-in-out;
-    transition: .3s ease-in-out;
+    background-color: $black;
+    //-webkit-transition: .3 ease-in-out;
+    //transition: .3s ease-in-out;
     text-decoration: none;
-    &:hover {
-      background-color: $gray;
-      //opacity: 1;
-    }
+    overflow: hidden;
+    position: relative;
+    //border: 1px solid $black;
+    //border-radius: 4px;
   }
   & h2 {
     color: $whitish;
     text-align: center;
     margin-bottom: 16px;
   }
-  & h6 {
-    text-align: center;
-    margin-top: 25%;
-    // opacity: 0;
-    // &:hover {
-    //   opacity: 1;
-    // }
+  & .portfolio-thumb-text {
+    position: absolute;
+    top: 38%;
+    left: 29%;
+    z-index: 1;
+    color: $whitish;
+    font-weight: 400;
+    &-side {
+      top: 27%;
+      left: 29%;
+    }
   }
   & p {
     text-align: center;
@@ -196,6 +211,27 @@ section.intro {
 }
 .mt-casethumb {
   grid-area: 1 / 1 / 3 / 3;
+  &-img {
+    transition: .4s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 550px;
+    margin-left: -450px; /* Half the width */
+    margin-top: -255px; /* Half the height */
+    z-index: 2;
+    &:hover {
+      opacity: 0.15;
+      transform: scale(1.075)
+    }
+  }
+}
+.illsutration-img {
+  width: 500px;
+  height: 250px;
+  margin-left: -250px; /* Half the width */
+  margin-top: -125px; /* Half the height */
 }
 
 .connect,
@@ -355,7 +391,7 @@ section.intro {
   &-text {
     column-count: 2;
     column-gap: 24px;
-    column-rule: 1px solid lightgray;
+    column-rule: 1px solid $light-gray;
   }
   &-grid {
     display: grid;
@@ -378,7 +414,7 @@ section.intro {
     grid-area: 1 / 1 / 2 / 9 ;
     column-count: 2;
     column-gap: 24px;
-    column-rule: 1px solid lightgray;
+    column-rule: 1px solid $light-gray;
   }
   &-heading {
     margin-top: 0;
@@ -471,7 +507,7 @@ section.intro {
   &-text {
     column-count: 3;
     column-gap: 24px;
-    column-rule: 1px solid lightgray;
+    column-rule: 1px solid $light-gray;
   }
 }
 
