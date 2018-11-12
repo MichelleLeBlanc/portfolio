@@ -2,26 +2,31 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Michelle LeBlanc's Portfolio</title>
 
   <meta name="description" content="Michelle LeBlanc's Portfolio">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100|Open+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto+Slab" rel="stylesheet">
 </head>
 
 <body class="grid">
 
   <header class="nav">
-    <div class="nav-grid">
-      <a class="nav-item" href="#intro">Intro</a>
-      <a class="nav-item" href="#skills">Skills</a>
-      <a class="nav-item" href="#portfolio">Portfolio</a>
-      <a class="nav-item" href="#connect">Connect</a>
+    <div class="nav-grid-mt">
+      <a class="nav-item-home" href="/">Go Back</a>
+      <a class="nav-item" href="#overview">Overview</a>
+      <a class="nav-item" href="#vision">Vision</a>
+      <a class="nav-item" href="#codebase">Codebase</a>
+      <a class="nav-item" href="#lifecycle">Lifecycle</a>
+      <a class="nav-item" href="#roles">Roles</a>
+      <!-- <a class="nav-item" href="#stats">Stats</a> -->
     </div>
   </header>
 
   <main>
-    <div id="intro"></div>
+    <div id="overview"></div>
     <section class="mt-overview-bg">
       <div class="container">
         <div class="mt-overview">
@@ -30,10 +35,13 @@
                 <img src="/assets/mlandingsketch.jpg" />
               </div>
               <div class="img-2">
-                <img src="/assets/mlandingsketch.jpg" />
+                <img src="/assets/mlandingfinal.jpg" />
               </div>
               <div class="img-3">
-                <img src="/assets/mlandingsketch.jpg" />
+                <img src="/assets/theaterdetail-final.jpg" />
+              </div>
+              <div class="img-4">
+                <img src="/assets/theaterdetail-sketch.jpg" />
               </div>
           </div>
           <div class="mt-overview-container">
@@ -75,48 +83,121 @@
       </div>
     </section>
 
+  <div id="vision"></div>
     <section class="vision">
       <div class="container">
         <h2 class="mt-vision-title">Establishing a Vision</h2>
         <div class="mt-vision-grid">
+
           <div class="taxonomy">
-            <img style="width: 100%; height: auto;" src="https://via.placeholder.com/550x250">
-            <h6>Taxonomy</h6>
+            <a href="#open-taxonomy"><img style="width: 100%; height: auto;" src="/assets/taxonomy_thumb.jpg"></a>
+            <h6 class="h6-bold">Taxonomy</h6>
             <p>
               I wanted to create a visualization of the proposed architecture of the new website content structure. This visual helped stakeholders see how users would organically navigate through the site. I went through approximately a dozen iterations after carefully combing through the sites intended user flows.
             </p>
           </div>
+          <div id="open-taxonomy" class="modal-window modal-taxonomy">
+            <div>
+              <a href="#1" title="Close" class="modal-close">Close</a>
+              <img src="/assets/taxonomy_large.jpg" />
+            </div>
+          </div>
 
           <div class="sketches">
-            <h6>Sketches and wireframes</h6>
-            <p>
+            <div class="sketches-grid">
+                <div class="sketch-1">
+                  <img src="/assets/sketches/sketch_home.jpg" />
+                </div>
+                <div class="sketch-2">
+                  <img src="/assets/sketches/sketch_movielanding.jpg" />
+                </div>
+                <div class="sketch-3">
+                  <img src="/assets/sketches/sketch_theaterlanding.jpg" />
+                </div>
+                <div class="sketch-4">
+                  <img src="/assets/sketches/sketch_moviedetail.jpg" />
+                </div>
+                <div class="sketch-5">
+                  <img src="/assets/sketches/sketch_theaterdetail.jpg" />
+                </div>
+                <div class="sketch-6">
+                  <img src="/assets/sketches/sketch_purchase.jpg" />
+                </div>
+            </div>
+            <h6 class="h6-bold">Sketches and Wireframes</h6>
+            <p class="sketches-text">
               This is where the real fun began. Sketches and wireframes allowed the team to dream big. Quick mockups of multiple new features would help the stakeholders to recognize which items would be a necessity for launch and which could become in later iterations. It was in this stage where the refining of features could really take place. Gathering the reactions and feedback from stakeholders also helped to know if some layouts and features were going too far off the projected redesign plan. This is when dreams would be reeled in to a more realistic expectations. For example, you will see Google Maps in some layouts of the sketches, but when meeting with stakeholders and discussing tight deadlines, the maps features were moved off the requirements list and put on the ‘nice-to-have’ list.
             </p>
           </div>
 
           <div class="styleguide">
-            <h6>Style Guide</h6>
-            <p>
-              I find that creating a style guide can be the most challenging part of a redesign. Especially when the style guide is not an iteration of the current guide, but a complete do-over of the current version. Why is this part of the process so hard? Well, because we all have different tastes. And getting everyone to agree on this subject can be a challenge. But by listening to feedback and properly defending decisions, I eventually got the room to agree. And beyond that, we were all excited to see the styles come more to life!
-            </p>
+            <h6 class="h6-bold mt-title-sm">Style Guide</h6>
+            <div class="styleguide-grid">
+              <div class="styleguide-text">
+                <p>
+                  I find that creating a style guide can be the most challenging part of a redesign. Especially when the style guide is not an iteration of the current guide, but a complete do-over of the current version. Why is this part of the process so hard? Well, because we all have different tastes. And getting everyone to agree on this subject can be a challenge. But by listening to feedback and properly defending decisions, I eventually got the room to agree. And beyond that, we were all excited to see the styles come more to life!
+                </p>
+              </div>
+              <div class="mt-gold"></div>
+              <div class="mt-green"></div>
+              <div class="mt-purple"></div>
+              <div class="mt-red"></div>
+              <div class="mt-blue"></div>
+              <div class="mt-orange"></div>
+              <div class="mt-assets-left">
+                  Font Families:<br />
+                <span class="mt-roboto">Roboto Slab</span>
+                <br />
+                <span class="mt-heebo">Heebo</span>
+              </div>
+              <div class="mt-assets-right">
+                Button Styles:<br />
+                <button class="mt-button back" type="button" name="button">Go Back</button>
+                <button class="mt-button" type="button" name="button">Continue</button>
+              </div>
+            </div>
           </div>
 
           <div class="ads">
-            <h6>Ad Presentation</h6>
+            <img src="/assets/ad-moviedetail.jpg" />
+            <h6 class="h6-bold">Ad Placement</h6>
             <p>
               The stakeholders for the ad sales department had a very defined objective: Sell ads and make the most money possible. Can you blame them? It was a delicate balance for me to represent the frontend and design side of the business while compromising and understanding the advertisement side of the business. They were used to calling the shots in the past. But with the recent shift to focus on the user experience, I was careful to keep their stakeholders updated weekly with progress reports and clearly define how I was considering ad revenue to still be a priority with the design decisions.
             </p>
           </div>
 
           <div class="mocks">
-            <h6>Mocks & Prototypes</h6>
-            <p>
+            <div class="mocks-grid">
+              <div>
+                <img src="/assets/mocks/homepage.jpg" />
+              </div>
+              <div>
+                <img src="/assets/mocks/mlanding-final.jpg" />
+              </div>
+              <div>
+                <img src="/assets/mocks/MovieDetails-final.jpg" />
+              </div>
+              <div>
+                <img src="/assets/mocks/TheaterLanding-final.jpg" />
+              </div>
+              <div>
+                <img src="/assets/mocks/theaterdetail-final.jpg" />
+              </div>
+              <div>
+                <img src="/assets/mocks/PP-SeatSelection-mock.jpg" />
+              </div>
+
+
+          <!-- End Carousel -->
+            </div>
+            <h6 class="h6-bold">Mocks & Prototypes</h6>
+            <p class="mocks-text">
               Where all the planning starts to really come together. Taking the concepts and layouts from the wireframes, adding the style guide, and showing actual page mocks is when the fantasy becomes a reality! I used Invision App to put together working prototypes and allowed stakeholders to feel like they could get their hands on a working product, before I actually had to commit to code. They supplied feedback and the iteration life cycle began.
             </p>
           </div>
 
           <div class="testing">
-            <h6>UX Testing, Iteration Cycle & Mock Finalization</h6>
+            <h6 class="h6-bold mt-title-sm">UX Testing, Iteration Cycle & Mock Finalization</h6>
             <p>
               With working mocks in tote, I was able to gather important user feedback so changes were made from educational guess, not just emotional responses. Much about design is emotion based, but once you gather actual data to confirm or deny your hypothesis, then you follow the facts and finalize mocks with effective results.
             </p>
@@ -125,6 +206,21 @@
       </div>
     </section>
 
+<div id="codebase"></div>
+  <div class="arch-code-black">
+    <div class="arch-code-bg">
+    </div>
+    <section class="arch-code">
+        <div class="container">
+          <h2>Architecturing the Frontend Codebase</h2>
+          <p>
+            The site redesign gave me the opportunity to architect the frontend code base into a flexible system that many team members can easily adhere to. This modular system improved team efficiency and decreased development headaches by using the SMACSS methodology in combination with Sass.
+          </p>
+        </div>
+    </section>
+  </div>
+
+<div id="lifecycle"></div>
     <section class="dev-life-bg">
       <div class="container">
         <div class="dev-life">
@@ -133,9 +229,6 @@
           </div>
           <div class="dev-life-container">
             <div class="dev-life-body">
-              <!-- Story Writing to Support an Agile workflow: -->
-              <!-- <ul>
-                <li> -->
                 <p>
                   Each major feature or page had its own epic and was comprised of dozens of stories. I was able to write all frontend stories for my team of developers to pick up and begin building the frontend of the website. The stories contained links to documentation where business rules were clearly stated with mocks, links to prototypes, and the style guide. I prioritized and assigned stories to frontend team members, including myself, for the appropriate tasks.
                 </p>
@@ -155,24 +248,15 @@
       </div>
     </section>
 
-    <section class="arch-code">
-      <div class="container">
-        <h2>Architecturing the Frontend Codebase</h2>
-        <p>
-          The site redesign gave me the opportunity to architect the frontend code base into a flexible system that many team members can easily adhere to. This modular system improved team efficiency and decreased development headaches by using the SMACSS methodology in combination with Sass.
-        </p>
-      </div>
-    </section>
-
+<div id="roles"></div>
     <section class="roles-bg">
+      <h2 class="roles-title">Roles & Responsibilities</h2>
       <div class="container">
         <div class="roles">
-          <div>
-            <h2 class="roles-title">Roles / Jobs</h2>
-          </div>
-          <div class="roles-container">
-            <div class="roles-body">
-              <h6>Senior Web Designer</h6>
+          <!-- <div class="roles-container">
+            <div class="roles-body"> -->
+            <div>
+              <h6 class="mt-title-sm">Senior Web Designer</h6>
               <ul>
                 <li>
                   Rebranded the company style by adding new, brighter color palette, modern fonts and the latest design trend styles
@@ -193,7 +277,11 @@
                   Performed biannual performance reviews
                 </li>
               </ul>
-              <h6>Frontend Team Lead, Manager, & Developer</h6>
+            </div>
+            <div>
+
+
+              <h6 class="mt-title-sm">Frontend Team Lead, Manager, & Developer</h6>
               <ul>
                 <li>
                   Organized frontend architect for all files within the View component
@@ -214,67 +302,48 @@
                   Interviewed and effectively participated in the hiring of new employees for the frontend team
                 </li>
               </ul>
-            </div>
-          </div>
+              </div>
+            <!-- </div>
+          </div> -->
         </div>
       </div>
     </section>
 
-    <!-- <section class="roles">
-      <div class="container">
-        <h2>Roles / Jobs</h2>
-        <h6>Senior Web Designer</h6>
-        <ul>
-          <li>
-            Rebranded the company style by adding new, brighter color palette, modern fonts and the latest design trend styles
-          </li>
-          <li>
-            Sole designer on all sketches, wireframes, finalized mockups and prototypes for full website redesign
-          </li>
-          <li>
-            Met with executive level stakeholders to discuss changes and defend design decisions
-          </li>
-          <li>
-            Conducted user testing for UX improvements
-          </li>
-          <li>
-            Managed and directed the junior web designer on tasks such as icon creation and market rebranding using the new style guide
-          </li>
-          <li>
-            Performed biannual performance reviews
-          </li>
-        </ul>
-        <h6>Frontend Team Lead, Manager, & Developer</h6>
-        <ul>
-          <li>
-            Organized frontend architect for all files within the View component
-          </li>
-          <li>
-            Created custom responsive HTML templates and feature widgets to be used within the Sitefinity CM
-          </li>
-          <li>
-            Styled templates and feature widgets using Sass
-          </li>
-          <li>
-            Wrote, organized, and delegated all frontend development stories to be completed by the frontend team and myself
-          </li>
-          <li>
-            Held daily standups to discuss progress and blockers with team members
-          </li>
-          <li>
-            Interviewed and effectively participated in the hiring of new employees for the frontend team
-          </li>
-        </ul>
-      </div>
-    </section> -->
-
-    <section class="stats">
+<div id="stats"></div>
+    <!-- <section class="stats">
       <div class="container">
         <h2>Stats</h2>
         <p>Conversions</p>
         <p>Abandon rate</p>
         <p>New subscribers</p>
         <p>Ads</p>
+      </div>
+    </section> -->
+    <section class="connect-bg">
+      <div class="container">
+        <h2>Say Hello</h2>
+        <div class="connect-grid">
+          <div>
+            <a href="mailto:hello@michelleleblanc.net">
+              <img class="connect-icon" src="/assets/email-icon.png" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/mallarddesigns/" target="_blank">
+              <img class="connect-icon" src="/assets/LinkedIn-128px.png" />
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/MichelleLeBlanc" target="_blank">
+              <img class="connect-icon" src="/assets/GitHub-120px.png" />
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/DesigningDucky" target="_blank">
+              <img class="connect-icon" src="/assets/Twitter_400px.png" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -284,7 +353,7 @@
       Created by Michelle LeBlanc, 2018
     </h6>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

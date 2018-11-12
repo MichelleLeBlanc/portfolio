@@ -2,20 +2,20 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Michelle LeBlanc's Portfolio</title>
 
   <meta name="description" content="Michelle LeBlanc's Portfolio">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100|Open+Sans:300" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:300" rel="stylesheet"> -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sacramento" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.min.css">
 </head>
 
 <body class="grid">
 
   <header class="nav">
     <div class="nav-grid">
-      <a class="nav-item" href="#intro">Intro</a>
+      <a class="nav-item" href="#hello">Hello</a>
       <a class="nav-item" href="#skills">Skills</a>
       <a class="nav-item" href="#portfolio">Portfolio</a>
       <a class="nav-item" href="#connect">Connect</a>
@@ -23,19 +23,21 @@
   </header>
 
   <main>
-    <div id="intro"></div>
-    <section class="intro-bg">
-      <div class="container">
-        <div class="intro">
-          <div class="intro-container">
-            <h1 class="intro-title">Michelle LeBlanc</h1>
-            <p class="intro-subhead">
-              Hello! Thanks for stopping by to learn more about me and what I love to do. Have any questions? Want to know more? Let's chat.
-            </p>
+    <div id="hello"></div>
+    <div class="intro-bg-img">
+      <section class="intro-bg">
+        <div class="container">
+          <div class="intro">
+            <div class="intro-container">
+              <h1 class="intro-title">Michelle LeBlanc</h1>
+              <p class="intro-subhead">
+                Hello! Thanks for stopping by to learn more about me and what I love to do. This site is still a work in progress, so I appologize for the lack of content. Check back periodically to see my progress, but in the meantime, here are all the ways to follow me and say <a class="connect2" href="#connect2">hello!</a>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section class="skills-bg">
       <div class="container">
@@ -98,37 +100,62 @@
 
     <section class="portfolio">
       <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-thumb">thumbnail 1</div>
-        <div class="portfolio-thumb">thumbnail 2</div>
-        <div class="portfolio-thumb">thumbnail 3</div>
-        <div class="portfolio-thumb">thumbnail 4</div>
-        <div class="portfolio-thumb">thumbnail 5</div>
-        <div class="portfolio-thumb">thumbnail 6</div>
-        <div class="portfolio-thumb">thumbnail 7</div>
-        <div class="portfolio-thumb">thumbnail 8</div>
+
+      <div class="container">
+        <div class="portfolio-grid">
+          <a class="portfolio-thumb mt-casethumb" href="/movietickets">
+      <!-- <a class="portfolio-thumb mt-casethumb" id="open-mt" href="#mt-modal"> -->
+            <img class="mt-casethumb-img" src="/assets/MT-thumb.jpg" />
+            <h5 class="portfolio-thumb-text">Redesign Case Study</h5>
+          </a>
+          <!-- <a class="portfolio-thumb" href="#open-illustrations"> -->
+          <a class="portfolio-thumb" id="open-illustrations" href="#animatedModal">
+            <img class="mt-casethumb-img illsutration-img" src="/assets/illustrations-thumb.jpg" />
+              <h5 class="portfolio-thumb-text  portfolio-thumb-text-side">Illustrations</h5>
+          </a>
+          <a class="portfolio-thumb" id="open-layouts" href="#layouts-modal">
+            <img class="mt-casethumb-img illsutration-img" src="/assets/layouts-thumb.jpg" />
+            <h5 class="portfolio-thumb-text portfolio-thumb-text-side">Print Layouts</h5>
+          </a>
+        </div>
       </div>
+
+      <!-- <div id="open-illustrations" class="modal-window">
+        <div>
+          <a href="#1" title="Close" class="modal-close">Close</a>
+          <h1>Illustrations</h1>
+          <div>Coming Soon!</div>
+        </div>
+      </div> -->
+
     </section>
 
+    <div id="connect2"></div>
     <div id="connect"></div>
     <section class="connect-bg">
       <div class="container">
-        <h2>Let's Connect</h2>
+        <h2>Say Hello</h2>
         <div class="connect-grid">
           <div>
-          <form>
-            <label for="fname">First Name</label><br />
-            <input type="text" id="name" name="name" placeholder="Name">
-            <br /><br />
-            <label for="subject">Subject</label><br />
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-            <br />
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-          <div>Linked In</div>
-          <div>Twitter</div>
-          <div>GitHub</div>
+            <a href="mailto:hello@michelleleblanc.net">
+              <img class="connect-icon" src="/assets/email-icon.png" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/mallarddesigns/" target="_blank">
+              <img class="connect-icon" src="/assets/LinkedIn-128px.png" />
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/MichelleLeBlanc" target="_blank">
+              <img class="connect-icon" src="/assets/GitHub-120px.png" />
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/DesigningDucky" target="_blank">
+              <img class="connect-icon" src="/assets/Twitter_400px.png" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -140,6 +167,42 @@
     </h6>
   </footer>
 
+<!-- Illustrations Modal -->
+<div id="animatedModal">
+  <div id="closebt-container" class="close-animatedModal">
+    <img class="closebt" src="assets/closebt.svg" />
+  </div>
+
+  <div class="modal-content">
+    <h1>Illustrations</h1>
+    <div>Coming Soon!</div>
+  </div>
+</div>
+
+<div id="layouts-modal">
+  <div id="btn-close-modal" class="close-layouts-modal">
+    <img class="closebt" src="assets/closebt.svg" />
+  </div>
+
+  <div class="modal-content">
+    <h1>Layouts</h1>
+    <div>Coming Soon!</div>
+  </div>
+</div>
+
+<!-- <div id="mt-modal">
+  <div id="btn-close-mt-modal" class="close-mt-modal">
+    <img class="closebt" src="assets/closebt.svg" />
+  </div>
+  <div class="modal-content">
+    <h1>Layouts</h1>
+    <div>Coming Soon!</div>
+  </div>
+</div> -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/animatedModal.min.js"></script>
+
 </body>
 </html>
