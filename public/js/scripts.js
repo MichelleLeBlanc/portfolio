@@ -9,18 +9,18 @@ $(document).ready(function(){
   // Modals
     $("#open-illustrations").animatedModal({
       modalTarget:'illustrations-modal',
-      color:'#f0f0f0'
+      color:'#f0f0f0',
     });
     $("#open-layouts").animatedModal({
         modalTarget:'layouts-modal',
         color:'#f0f0f0',
     });
-    $("#open-mt").animatedModal({
-        modalTarget:'mt-modal',
-        color:'#f0f0f0',
-    });
-    // $("#open-tax").animatedModal({
-    //     modalTarget:'tax-modal',
+    // $("#open-mt").animatedModal({
+    //     modalTarget:'mt-modal',
     //     color:'#f0f0f0',
     // });
+    $("#open-taxmodal").animatedModal({
+        modalTarget:'taxmodal',
+        color:'#f0f0f0'
+    });
 });
