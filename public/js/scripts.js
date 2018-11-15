@@ -5,8 +5,10 @@ $(document).ready(function(){
         var hash = this.hash;
         $('html, body').animate({scrollTop: $(hash).offset().top}, 5);
     });
-  // Modal
+
+  // Modals
     $("#open-illustrations").animatedModal({
+      modalTarget:'illustrations-modal',
       color:'#f0f0f0'
     });
     $("#open-layouts").animatedModal({
@@ -17,4 +19,8 @@ $(document).ready(function(){
         modalTarget:'mt-modal',
         color:'#f0f0f0',
     });
+    // $("#open-tax").animatedModal({
+    //     modalTarget:'tax-modal',
+    //     color:'#f0f0f0',
+    // });
 });

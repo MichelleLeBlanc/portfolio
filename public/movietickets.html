@@ -18,7 +18,7 @@
       <a class="nav-item-home" href="/">Go Back</a>
       <a class="nav-item" href="#overview">Overview</a>
       <a class="nav-item" href="#vision">Vision</a>
-      <a class="nav-item" href="#codebase">Codebasee</a>
+      <a class="nav-item" href="#codebase">Codebase</a>
       <a class="nav-item" href="#lifecycle">Lifecycle</a>
       <a class="nav-item" href="#roles">Roles</a>
       <!-- <a class="nav-item" href="#stats">Stats</a> -->
@@ -90,21 +90,25 @@
         <div class="mt-vision-grid">
 
           <div class="taxonomy">
-            <a href="#open-taxonomy"><img style="width: 100%; height: auto;" src="/assets/taxonomy_thumb.jpg"></a>
+            <a id="open-tax" href="#tax-modal">
+            <!-- <a href="#open-taxonomy"> -->
+              <img style="width: 100%; height: auto;" src="/assets/taxonomy_thumb.jpg">
+            </a>
             <h6 class="h6-bold">Taxonomy</h6>
             <p>
               I wanted to create a visualization of the proposed architecture of the new website content structure. This visual helped stakeholders see how users would organically navigate through the site. I went through approximately a dozen iterations after carefully combing through the sites intended user flows.
             </p>
           </div>
-          <div id="open-taxonomy" class="modal-window modal-taxonomy">
+
+          <!-- <div id="open-taxonomy" class="modal-window modal-taxonomy">
             <div>
               <a href="#1" title="Close" class="modal-close">Close</a>
               <img src="/assets/taxonomy_large.jpg" />
             </div>
-          </div>
+          </div> -->
 
           <div class="sketches">
-            <div class="sketches-grid">
+            <!-- <div class="sketches-grid">
                 <div class="sketch-1">
                   <img src="/assets/sketches/sketch_home.jpg" />
                 </div>
@@ -123,7 +127,7 @@
                 <div class="sketch-6">
                   <img src="/assets/sketches/sketch_purchase.jpg" />
                 </div>
-            </div>
+            </div> -->
             <h6 class="h6-bold">Sketches and Wireframes</h6>
             <p class="sketches-text">
               This is where the real fun began. Sketches and wireframes allowed the team to dream big. Quick mockups of multiple new features would help the stakeholders to recognize which items would be a necessity for launch and which could become in later iterations. It was in this stage where the refining of features could really take place. Gathering the reactions and feedback from stakeholders also helped to know if some layouts and features were going too far off the projected redesign plan. This is when dreams would be reeled in to a more realistic expectations. For example, you will see Google Maps in some layouts of the sketches, but when meeting with stakeholders and discussing tight deadlines, the maps features were moved off the requirements list and put on the ‘nice-to-have’ list.
@@ -347,12 +351,23 @@
       </div>
     </section>
   </main>
+  <!-- Taxonomy Modal -->
+  <div id="tax-modal">
+    <div id="btn-close-tax-modal" class="close-tax-modal">
+      <img class="closebt" src="assets/closebt.svg" />
+    </div>
+    <div class="modal-content">
+      <img src="/assets/taxonomy_large.jpg" />
+    </div>
+  </div>
 
   <footer class="footer">
     <h6>
       Created by Michelle LeBlanc, 2018
     </h6>
   </footer>
+
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/animatedModal.min.js"></script>
   <script src="js/scripts.js"></script>
