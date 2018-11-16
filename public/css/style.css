@@ -641,59 +641,8 @@ section.intro {
   grid-gap: 2px;
   position: relative;
 }
-.sketch-1, .sketch-2, .sketch-3, .sketch-4, .sketch-5, .sketch-6 {
-  transition: 0.2s ease-in-out;
-  height: 250px;
-  overflow: hidden;
-}
-.sketch-1:hover, .sketch-2:hover, .sketch-3:hover, .sketch-4:hover, .sketch-5:hover, .sketch-6:hover {
-  z-index: 10;
-  transform: scale(1.125);
-  height: auto;
-  position: absolute;
-}
-.sketch-1 img, .sketch-2 img, .sketch-3 img, .sketch-4 img, .sketch-5 img, .sketch-6 img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #8d99ab;
-  -webkit-box-shadow: -4px 4px 6px -3px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: -4px 4px 6px -3px rgba(0, 0, 0, 0.5);
-  box-shadow: -4px 4px 6px -3px rgba(0, 0, 0, 0.5);
-  transition: 0.2s ease-in-out;
-}
-.sketch-1 {
-  grid-area: 1/1/2/5;
-  z-index: 1;
-  height: calc(250px + 65px);
-}
-.sketch-2 {
-  grid-area: 1/2/2/7;
-  z-index: 2;
-  padding-top: 15px;
-  height: calc(250px + 50px);
-}
-.sketch-3 {
-  grid-area: 1/4/2/8;
-  z-index: 3;
-  padding-top: 30px;
-  height: calc(250px + 45px);
-}
-.sketch-4 {
-  grid-area: 1/6/2/10;
-  z-index: 4;
-  padding-top: 45px;
-  height: calc(250px + 20px);
-}
-.sketch-5 {
-  grid-area: 1/8/2/12;
-  z-index: 5;
-  padding-top: 60px;
-  height: calc(250px + 5px);
-}
-.sketch-6 {
-  grid-area: 1/10/2/14;
-  z-index: 6;
-  padding-top: 75px;
+.sketches h6 {
+  margin-top: 18px;
 }
 
 .styleguide {
@@ -794,6 +743,9 @@ section.intro {
   width: 100%;
   height: auto;
 }
+.ads h6 {
+  margin-top: 18px;
+}
 
 .mocks {
   grid-area: 5/1/12/6;
@@ -818,6 +770,9 @@ section.intro {
   column-count: 3;
   column-gap: 24px;
   column-rule: 1px solid #d9d9d9;
+}
+.mocks h6 {
+  margin-top: 18px;
 }
 
 .testing {
@@ -962,7 +917,8 @@ section.intro {
 
 .close-animatedModal,
 .close-layouts-modal,
-.close-mt-modal {
+.close-mt-modal,
+.close-tax-modal {
   text-align: center;
 }
 

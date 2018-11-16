@@ -6,9 +6,13 @@
   <title>Michelle LeBlanc's Portfolio</title>
 
   <meta name="description" content="Michelle LeBlanc's Portfolio">
+
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400|Heebo|Roboto+Slab" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto+Slab" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/animate.min.css"> <!-- modal -->
+  <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' /> <!-- gallery -->
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto+Slab" rel="stylesheet">
+
 </head>
 
 <body class="grid">
@@ -90,40 +94,47 @@
         <div class="mt-vision-grid">
 
           <div class="taxonomy">
-            <a href="#open-taxonomy"><img style="width: 100%; height: auto;" src="/assets/taxonomy_thumb.jpg"></a>
+            <a id="open-tax" href="#tax-modal">
+            <!-- <a href="#open-taxonomy"> -->
+              <img style="width: 100%; height: auto;" src="/assets/taxonomy_thumb.jpg"></a>
             <h6 class="h6-bold">Taxonomy</h6>
             <p>
               I wanted to create a visualization of the proposed architecture of the new website content structure. This visual helped stakeholders see how users would organically navigate through the site. I went through approximately a dozen iterations after carefully combing through the sites intended user flows.
             </p>
           </div>
-          <div id="open-taxonomy" class="modal-window modal-taxonomy">
+          <!-- <div id="open-taxonomy" class="modal-window modal-taxonomy">
             <div>
               <a href="#1" title="Close" class="modal-close">Close</a>
               <img src="/assets/taxonomy_large.jpg" />
             </div>
-          </div>
+          </div> -->
 
           <div class="sketches">
-            <div class="sketches-grid">
-                <div class="sketch-1">
-                  <img src="/assets/sketches/sketch_home.jpg" />
-                </div>
-                <div class="sketch-2">
-                  <img src="/assets/sketches/sketch_movielanding.jpg" />
-                </div>
-                <div class="sketch-3">
-                  <img src="/assets/sketches/sketch_theaterlanding.jpg" />
-                </div>
-                <div class="sketch-4">
-                  <img src="/assets/sketches/sketch_moviedetail.jpg" />
-                </div>
-                <div class="sketch-5">
-                  <img src="/assets/sketches/sketch_theaterdetail.jpg" />
-                </div>
-                <div class="sketch-6">
-                  <img src="/assets/sketches/sketch_purchase.jpg" />
-                </div>
-            </div>
+            <div id="sketch-gallery" style="display:none;">
+        			<img alt="Homepage Sketch" src="/assets/sketches/sketch_home.jpg"
+        				data-image="/assets/sketches/sketch_home.jpg"
+        				data-description="Homepage Sketch">
+
+        			<img alt="Movies Landing Page Sketch" src="/assets/sketches/sketch_movielanding.jpg"
+        				data-image="/assets/sketches/sketch_movielanding.jpg"
+        				data-description="Movies Landing Page Sketch">
+
+              <img alt="Theaters Landing Page Sketch" src="/assets/sketches/sketch_theaterlanding.jpg"
+        				data-image="/assets/sketches/sketch_theaterlanding.jpg"
+        				data-description="Theaters Landing Page Sketch">
+
+              <img alt="Movie Details Page Sketch" src="/assets/sketches/sketch_moviedetail.jpg"
+        				data-image="/assets/sketches/sketch_moviedetail.jpg"
+        				data-description="Movie Details Page Sketch">
+
+              <img alt="Theater Details Page Sketch" src="/assets/sketches/sketch_theaterdetail.jpg"
+        				data-image="/assets/sketches/sketch_theaterdetail.jpg"
+        				data-description="Theater Details Page Sketch">
+
+              <img alt="Purchase Process Page 1 Sketch" src="/assets/sketches/sketch_purchase.jpg"
+        				data-image="/assets/sketches/sketch_purchase.jpg"
+        				data-description="Purchase Process Page 1 Sketch">
+        		</div>
             <h6 class="h6-bold">Sketches and Wireframes</h6>
             <p class="sketches-text">
               This is where the real fun began. Sketches and wireframes allowed the team to dream big. Quick mockups of multiple new features would help the stakeholders to recognize which items would be a necessity for launch and which could become in later iterations. It was in this stage where the refining of features could really take place. Gathering the reactions and feedback from stakeholders also helped to know if some layouts and features were going too far off the projected redesign plan. This is when dreams would be reeled in to a more realistic expectations. For example, you will see Google Maps in some layouts of the sketches, but when meeting with stakeholders and discussing tight deadlines, the maps features were moved off the requirements list and put on the ‘nice-to-have’ list.
@@ -167,7 +178,32 @@
           </div>
 
           <div class="mocks">
-            <div class="mocks-grid">
+            <div id="mocks-gallery" style="display:none;">
+        			<img alt="Homepage Sketch" src="/assets/mocks/homepage.jpg"
+        				data-image="/assets/mocks/homepage.jpg"
+        				data-description="Homepage Sketch">
+
+        			<img alt="Movies Landing Page Sketch" src="/assets/mocks/mlanding-final.jpg"
+        				data-image="/assets/mocks/mlanding-final.jpg"
+        				data-description="Movies Landing Page Sketch">
+
+              <img alt="Theaters Landing Page Sketch" src="/assets/mocks/MovieDetails-final.jpg"
+        				data-image="/assets/mocks/MovieDetails-final.jpg"
+        				data-description="Theaters Landing Page Sketch">
+
+              <img alt="Movie Details Page Sketch" src="/assets/mocks/TheaterLanding-final"
+        				data-image="/assets/mocks/TheaterLanding-final"
+        				data-description="Movie Details Page Sketch">
+
+              <img alt="Theater Details Page Sketch" src="/assets/mocks/theaterdetail-final.jpg"
+        				data-image="/assets/mocks/theaterdetail-final.jpg"
+        				data-description="Theater Details Page Sketch">
+
+              <img alt="Purchase Process Page 1 Sketch" src="/assets/mocks/PP-SeatSelection-mock.jpg"
+        				data-image="/assets/mocks/PP-SeatSelection-mock.jpg"
+        				data-description="Purchase Process Page 1 Sketch">
+        		</div>
+            <!-- <div class="mocks-grid">
               <div>
                 <img src="/assets/mocks/homepage.jpg" />
               </div>
@@ -186,10 +222,7 @@
               <div>
                 <img src="/assets/mocks/PP-SeatSelection-mock.jpg" />
               </div>
-
-
-          <!-- End Carousel -->
-            </div>
+            </div> -->
             <h6 class="h6-bold">Mocks & Prototypes</h6>
             <p class="mocks-text">
               Where all the planning starts to really come together. Taking the concepts and layouts from the wireframes, adding the style guide, and showing actual page mocks is when the fantasy becomes a reality! I used Invision App to put together working prototypes and allowed stakeholders to feel like they could get their hands on a working product, before I actually had to commit to code. They supplied feedback and the iteration life cycle began.
@@ -353,8 +386,41 @@
       Created by Michelle LeBlanc, 2018
     </h6>
   </footer>
+
+  <div id="tax-modal">
+    <div id="btn-close-tax-modal" class="close-tax-modal">
+      <img class="closebt" src="assets/closebt.svg" />
+    </div>
+
+    <div class="modal-content">
+      <img src="/assets/taxonomy_large.jpg" />
+    </div>
+  </div>
+  <!-- <script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript' src='unitegallery/themes/default/ug-theme-default.js'></script>
+  <script type='text/javascript' src='unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-functions.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-thumbsgeneral.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-thumbsstrip.js'></script>
+  <!-- maybe- check mobile -->
+  <script type='text/javascript' src='unitegallery/js/ug-touchthumbs.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-tiles.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-tiledesign.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-avia.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-slider.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-sliderassets.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-touchslider.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-zoomslider.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-video.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-gallery.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-lightbox.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-carousel.js'></script>
+  <script type='text/javascript' src='unitegallery/js/ug-api.js'></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
   <script src="js/animatedModal.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script type='text/javascript' src="js/scripts.js"></script>
+
 </body>
 </html>
