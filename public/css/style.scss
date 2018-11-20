@@ -23,6 +23,8 @@ $small-max-465: 465px !default;
 $small-max-360: 360px !default;
 
 
+
+
 * {
   font-family: $body-font;
   font-weight: 400;
@@ -45,6 +47,9 @@ p { margin-bottom: 16px;}
 
 h1 {
   font-size: 62px;
+  @media only screen and (max-width: $medium-max-900) {
+    font-size: 58px;
+  }
   @media only screen and (max-width: $small-max-550) {
     font-size: 50px;
   }
@@ -54,8 +59,11 @@ h1 {
 }
 h2 {
   font-size: 52px;
-  @media only screen and (max-width: $small-max-550) {
+  @media only screen and (max-width: $medium-max-900) {
     font-size: 46px;
+  }
+  @media only screen and (max-width: $small-max-550) {
+    font-size: 42px;
   }
   @media only screen and (max-width: $small-max-360) {
     font-size: 40px;
@@ -63,8 +71,11 @@ h2 {
 }
 h3 {
   font-size: 40px;
-  @media only screen and (max-width: $small-max-550) {
+  @media only screen and (max-width: $medium-max-900) {
     font-size: 36px;
+  }
+  @media only screen and (max-width: $small-max-550) {
+    font-size: 32px;
   }
   @media only screen and (max-width: $small-max-360) {
     font-size: 27px;
@@ -72,6 +83,9 @@ h3 {
 }
 h4 {
   font-size: 36px;
+  @media only screen and (max-width: $medium-max-900) {
+    font-size: 30px;
+  }
   @media only screen and (max-width: $small-max-550) {
     font-size: 27px;
   }
@@ -93,20 +107,41 @@ h5 {
 }
 h6 {
   font-size: 28px;
-  //margin-top: 30px;
+  @media only screen and (max-width: $medium-max-900) {
+    font-size: 26px;
+  }
   @media only screen and (max-width: $small-max-550) {
-    font-size: 21px;
+    font-size: 24px;
   }
   @media only screen and (max-width: $small-max-360) {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 small { font-size: 75%;}
 
-section, footer {
+.hide-medium-only {
+  display: block;
+  @media only screen and (max-width: $medium-breakpoint) {
+    display: none;
+  }
+  @media only screen and (max-width: $small-breakpoint) {
+    display: block;
+  }
+}
+.show-medium-only {
+  display: none;
+  @media only screen and (max-width: $medium-breakpoint) {
+    display: block;
+  }
+  @media only screen and (max-width: $small-breakpoint) {
+    display: none;
+  }
+}
+
+section {
   padding: 20px;
-  min-height: 300px;
+  min-height: 200px;
 }
 section.intro {
   padding: 0;
@@ -133,13 +168,12 @@ section.intro {
 
 .nav {
   grid-area: nav;
-  background-color: rgba(0,0,0,0.55);
+  background-color: rgba(0,0,0,0.70);
   z-index: 1000;
   position: fixed;
   top: 0;
   width: 100%;
-  &-item,
-  &-item-home {
+  &-item {
     margin: 10px;
     color: $whitish;
     text-decoration: none;
@@ -147,10 +181,37 @@ section.intro {
     &:hover {
       color: $orange;
     }
+    @media only screen and (max-width: $small-max-465) {
+      margin: 10px 5px;
+    }
+    @media only screen and (max-width: $small-max-360) {
+      font-size: 12px;
+    }
+  }
+  &-item-home {
+    margin: 10px 10px 5px 10px;
+    //color: $whitish;
+    background: -webkit-linear-gradient($orange, $cherry, $cherry, $purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-family: $header-font;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1;
+    opacity: 1;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.75;
+    }
+    @media only screen and (max-width: $small-max-465) {
+      margin: 10px 5px 0 10px;
+      font-size: 22px;
+    }
   }
   &-grid {
     display: grid;
-    grid: auto / repeat(4, auto);
+    grid: auto / 1fr repeat(3, auto) 1fr;
     justify-content: center;
     &-mt {
       display: grid;
@@ -173,6 +234,8 @@ section.intro {
   &-bg {
     background-color: rgba(0,0,0,0.80);
     margin: 0;
+    box-shadow: inset 0px 30px 30px -20px #000,
+                inset 0px -30px 30px -20px #000;
     &-img {
       // background: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/09/Marble-Freebie-Featured-Image-01.jpg?w=1440&h=960&crop=1");
       background-image: url("/assets/BW-Texture.jpg");
@@ -237,9 +300,7 @@ section.intro {
         height: auto;
         margin-top: 0;
         margin-bottom: 25px;
-        // &:first-child {
-        //   margin-top: -75px;
-        // }
+        //margin: 0 16px 25px 1
       }
       & li {
         margin-bottom: 8px
@@ -260,7 +321,7 @@ section.intro {
     margin-left: -20px;
     color: $cherry;
     @media only screen and (max-width: $medium-max-900) {
-      margin: 8px auto 12px -35px;
+      margin: 8px 0 12px -20px;
       padding-bottom: 15px;
     }
   }
@@ -377,21 +438,26 @@ section.intro {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     opacity: 0.15;
   }
   &-black {
     background-color: $black;
     z-index: -1;
     position: relative;
+    //box-shadow: inset 0px 0px 30px 8px rgba(0,0,0,1);
+    box-shadow: inset 0px 30px 30px -20px #000,
+                inset 0px -30px 30px -20px #000;
   }
   & .container {
     max-width: 965px;
+    padding-top: 30px;
   }
   & h2 {
     color: $cherry;
     text-align: center;
     margin-bottom: 16px;
+    padding-top: 16px;
   }
 }
 
@@ -411,6 +477,7 @@ section.intro {
       color: $cherry;
       text-align: center;
       margin-bottom: 16px;
+      padding-top: 38px;
     }
   }
   &-icon {
@@ -426,13 +493,25 @@ section.intro {
   }
 }
 
+.layouts-grid {
+  display: grid;
+  grid: auto / repeat(3, 1fr);
+  border: 1px solid blue;
+  margin: 20px;
+  & div img {
+    width: 100%;
+    border: 1px solid blue;
+  }
+}
+
 
 .footer {
   grid-area: ftr;
-  background-color: $black;
-  color: $gray;
+  background-color: darken($whitish, 5%);
+  color: $black;
   text-align: center;
-  min-height: 300px;
+  //min-height: 60px;
+  padding: 40px 10px;
   & h6 {
     font-size: 16px;
   }
@@ -494,22 +573,43 @@ section.intro {
   display: grid;
   grid: auto / 50% 50%;
   padding-top: 62px;
-  //padding-bottom: 60px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid: auto auto / auto;
+    padding-top: 10px;
+  }
   &-bg {
     background-color: $black;
     margin-bottom: -20px;
-    //box-shadow: inset 0px -3px 19px 1px rgba(0,0,0,0.75);
   }
   &-grid {
     display: grid;
-    //grid: 100% / repeat(5, 1fr);
     grid: repeat(8, auto) / repeat(10, 1fr);
     margin-top: 40px;
     max-height: 700px;
     overflow: hidden;
+    @media only screen and (max-width: $medium-max-900) {
+      order: 2;
+    }
+    @media only screen and (max-width: $small-breakpoint) {
+      max-height: 600px;
+    }
+    @media only screen and (max-width: $small-max-500) {
+      max-height: 500px;
+    }
+    @media only screen and (max-width: $small-max-465) {
+      max-height: 400px;
+    }
   }
   &-container {
     padding: 20px 40px;
+    @media only screen and (max-width: $medium-max-900) {
+      order: 1;
+      margin-top: 45px;
+    }
+    @media only screen and (max-width: $medium-max-750) {
+      padding: 0;
+      margin-top: 45px;
+    }
   }
   &-title {
     background: -webkit-linear-gradient($orange, $cherry, $cherry, $purple);
@@ -539,6 +639,13 @@ section.intro {
     grid: repeat(14, auto) / repeat(5, 1fr);
     grid-gap: 60px;
     margin-bottom: 40px;
+    @media only screen and (max-width: $large-max-1150) {
+      grid-gap: 35px;
+    }
+    @media only screen and (max-width: $medium-max-900) {
+      grid: repeat(15, auto) / repeat(5, 1fr);
+      grid-gap: 45px;
+    }
     & div {
       //border: 1px solid blue;
       //width: 100%;
@@ -556,6 +663,9 @@ section.intro {
   background-color: #fff;
   border: 1px solid $light-gray;
   padding: 20px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid-area: 1 / 1 / 3 / 6 ;
+  }
   & img {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -581,10 +691,16 @@ section.intro {
   background-color: #fff;
   border: 1px solid $light-gray;
   padding: 20px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid-area: 3 / 1 / 6 / 6 ;
+  }
   &-text {
     column-count: 2;
     column-gap: 24px;
     column-rule: 1px solid $light-gray;
+    @media only screen and (max-width: $small-breakpoint) {
+      column-count: 1;
+    }
   }
   &-grid {
     display: grid;
@@ -668,6 +784,9 @@ section.intro {
   background-color: #fff;
   border: 1px solid $light-gray;
   padding: 20px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid-area: 8 / 1 / 10 / 6 ;
+  }
   &-grid {
     display: grid;
     grid: auto 1fr 1fr / repeat(6, 1fr);
@@ -680,6 +799,9 @@ section.intro {
     column-count: 2;
     column-gap: 24px;
     column-rule: 1px solid $light-gray;
+    @media only screen and (max-width: $small-breakpoint) {
+      column-count: 1;
+    }
   }
 }
 
@@ -731,10 +853,16 @@ section.intro {
   &-assets-left {
     grid-area: 3 / 1 / 4 / 4;
     padding-top: 8px;
+    @media only screen and (max-width: $small-max-465) {
+      grid-area: 3 / 1 / 4 / 7;
+    }
   }
   &-assets-right {
     grid-area: 3 / 4 / 4 / 7;
     padding-top: 8px;
+    @media only screen and (max-width: $small-max-465) {
+      grid-area: 4 / 1 / 6 / 7;
+    }
   }
   &-button {
     font-family: 'Heebo', sans-serif;
@@ -769,6 +897,9 @@ section.intro {
   background-color: #fff;
   border: 1px solid $light-gray;
   padding: 20px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid-area: 6 / 1 / 8 / 6 ;
+  }
   & img {
     width: 100%;
     height: auto;
@@ -783,6 +914,9 @@ section.intro {
   background-color: #fff;
   border: 1px solid $light-gray;
   padding: 20px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid-area: 10 / 1 / 14 / 6 ;
+  }
   &-grid {
     display: grid;
     grid: auto/ repeat(6, 1fr);
@@ -793,8 +927,6 @@ section.intro {
       & img {
         border: 1px solid gray;
         width: 100%;
-        //max-height: 300px;
-        //overflow: hidden;
       }
     }
   }
@@ -802,6 +934,9 @@ section.intro {
     column-count: 3;
     column-gap: 24px;
     column-rule: 1px solid $light-gray;
+    @media only screen and (max-width: $small-breakpoint) {
+      column-count: 1;
+    }
   }
   & h6 {
     margin-top: 18px;
@@ -813,6 +948,9 @@ section.intro {
   background-color: #fff;
   border: 1px solid $light-gray;
   padding: 20px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid-area: 14 / 1 / 16 / 6 ;
+  }
 }
 
 .vision-title {
@@ -827,6 +965,14 @@ section.intro {
   color: $whitish;
   grid-gap: 80px;
   padding: 40px 40px;
+  @media only screen and (max-width: $medium-max-900) {
+    grid-gap: 40px;
+    padding: 20px 10px 10px 10px;
+  }
+  @media only screen and (max-width: $small-breakpoint) {
+    grid: 1fr 1fr / 100%;
+    grid-gap: 30px;
+  }
   & h3 {
     text-align: center;
   }
@@ -836,15 +982,19 @@ section.intro {
   }
   &-bg {
     background-color: $black;
+    box-shadow: inset 0px 25px 25px -25px #000,
+                inset 0px -25px 25px -25px #000;
   }
   &-title {
     text-align: center;
     color: $cherry;
-    // margin-top: 0;
-    // margin-right: 20px;
+    padding-top: 16px;
   }
   &-desc {
     color: $gray;
+  }
+  & h6 {
+    color: $whitish;
   }
 }
 
@@ -852,18 +1002,32 @@ section.intro {
   grid-area: pfo;
   display: grid;
   grid: auto / 50% 50%;
+  @media only screen and (max-width: $medium-max-900) {
+    grid: auto auto / 100%;
+  }
   &-bg {
     background-color: $whitish;
   }
   &-container {
-    padding: 40px 40px 25px 16px;
+    padding: 20px 40px 25px 16px;
+    @media only screen and (max-width: $medium-max-900) {
+      padding: 20px 10px 10px 10px;
+    }
   }
   &-title {
+    padding-top: 23px;
     text-align: right;
-    // background: -webkit-linear-gradient($purple, $cherry, $cherry);
-    //   -webkit-background-clip: text;
-    //   -webkit-text-fill-color: transparent;
     color: $cherry;
+    @media only screen and (max-width: $medium-max-900) {
+      text-align: center;
+      padding-top: 16px;
+    }
+    &-amp {
+      display: block;
+      @media only screen and (max-width: $small-max-465) {
+        display: none;
+      }
+    }
   }
   &-desc {
     color: $gray;
@@ -883,75 +1047,15 @@ section.intro {
   font-weight: 400;
 }
 
-///////////////////
-.modal-window.modal-taxonomy{
-  &>div {
-    width: 93%;
-  }
-  & img {
-    width: 100%;
-  }
-}
-
-.modal-window {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.75);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1001;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  &:target {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  &>div {
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2em;
-    background: #ffffff;
-    color: #333333;
-    @media only screen and (max-width: $small-max-500) {
-      width: 80%;
-    }
-  }
-  h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
-    color: #333333;
-  }
-}
-
-.modal-close {
-  color: #aaa;
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 70px;
-  text-decoration: none;
-  &:hover {
-    color: #000;
-  }
-}
-
 .closebt {
   cursor: pointer;
-  margin: 15px 15px 50px 15px;
-  width: 40px;
+  margin: 15px 30px 30px 15px;
+  width: 30px;
   transition: all 0.2s;
-  filter:invert(50%);
+  filter:invert(70%);
+  @media only screen and (max-width: $small-max-465) {
+    margin: 12px 16px 20px 12px;
+  }
   &:hover {
     transform: rotate(90deg);
   }
@@ -961,5 +1065,21 @@ section.intro {
 .close-layouts-modal,
 .close-mt-modal,
 .close-tax-modal {
-  text-align: center;
+  text-align: right;
+}
+
+.modal {
+  &-content {
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-headers {
+    text-align: center;
+  }
+}
+
+.ug-lightbox .ug-lightbox-overlay {
+  background-color: rgba(0,0,0,0.9);
 }
