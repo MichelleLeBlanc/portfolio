@@ -9,6 +9,12 @@ $(document).ready(function(){
 			// tile_border_width:1,
 			// tile_border_color:"#24262d"
   });
+  $("#sketch-gallery1").unitegallery({
+      gallery_theme:"tiles",
+      tiles_space_between_cols: 8,
+      tiles_space_between_cols_mobile: 5,
+      tiles_col_width: 175
+  });
 
   $("#mocks-gallery").unitegallery({
       gallery_theme:"tiles",
@@ -21,11 +27,12 @@ $(document).ready(function(){
   });
 
   // Removes hash from url on nav scroll
-    $('.nav-item').on('click', function(event) {
+    $('.nav-item, .connect2, .nav-item-home-ml').on('click', function(event) {
         event.preventDefault();
         var hash = this.hash;
         $('html, body').animate({scrollTop: $(hash).offset().top}, 5);
     });
+
   // Modal
     $("#open-illustrations").animatedModal({
       color:'#f0f0f0'
@@ -40,7 +47,8 @@ $(document).ready(function(){
     });
     $("#open-tax").animatedModal({
         modalTarget:'tax-modal',
-        color:'#f0f0f0',
+        //color: 'rgba(0,0,0,0.9)',
+        color:'#ffffff',
     });
 
 });

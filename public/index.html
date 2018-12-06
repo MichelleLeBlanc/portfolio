@@ -15,15 +15,16 @@
 
   <header class="nav">
     <div class="nav-grid">
-      <a class="nav-item" href="#hello">Hello</a>
+      <a class="nav-item-home nav-item-home-ml" href="#top">ML</a>
+      <!-- <a class="nav-item" href="#top">Hello</a> -->
       <a class="nav-item" href="#skills">Skills</a>
       <a class="nav-item" href="#portfolio">Portfolio</a>
-      <a class="nav-item" href="#connect">Connect</a>
+      <a class="nav-item" href="#connect">Say Hello</a>
     </div>
   </header>
 
   <main>
-    <div id="hello"></div>
+    <div id="top"></div>
     <div class="intro-bg-img">
       <section class="intro-bg">
         <div class="container">
@@ -31,7 +32,7 @@
             <div class="intro-container">
               <h1 class="intro-title">Michelle LeBlanc</h1>
               <p class="intro-subhead">
-                Hello! Thanks for stopping by to learn more about me and what I love to do. This site is still a work in progress, so I appologize for the lack of content. Check back periodically to see my progress, but in the meantime, here are all the ways to follow me and say <a class="connect2" href="#connect2">hello!</a>
+                Hello! Thanks for stopping by to learn more about me and what I love to do. I have been designing for over 14 years and have touched on everything from print layouts to full website redesigns. Let's discuss more of how I can help your visions become a reality. Want to spy on me via my social networks? That's cool! Don't be shy and say <a class="connect2" href="#connect2">hello!</a>
               </p>
             </div>
           </div>
@@ -48,11 +49,14 @@
                 <div id="skills"></div>
                   <h3 class="skills-header">Designer</h3>
                   <ul>
-                    <li>Over 13 Years Experience</li>
+                    <li>Over 14 Years Experience</li>
                     <li>Adobe Creative Suite</li>
                     <li>Web Branding & Style Guides</li>
                     <li>Invision Prototyping</li>
-                    <li>Wireframing Layouts</li>
+                    <li>Wireframe Site Layouts</li>
+                    <li>Catalog Page Layouts</li>
+                    <li>Print Production</li>
+                    <li>Dielines for Overseas Manufacturing</li>
                     <li>Custom Illustrations & Icons</li>
                     <li>Photo Correction</li>
                     <li>Original Supporting Artwork</li>
@@ -71,8 +75,9 @@
                     <li>Git Source Control</li>
                     <li>Atom Text & Source Editor</li>
                     <li>Microsoft Visual Studio</li>
-                    <li>MVC Framework</li>
+                    <!-- <li>MVC Framework</li> -->
                     <li>Web Content Accessibility Guidelines</li>
+                    <li>User Testing</li>
                     <li>Cross Browser Support</li>
                   </ul>
               </div>
@@ -84,7 +89,7 @@
                   <li>Frontend team lead</li>
                   <li>Delegated and managed workflow for entire team</li>
                   <li>Gathered business requirements for story writing</li>
-                  <li>Presented proposed team plans to executive members</li>
+                  <li>Present proposed team plans to executive members</li>
                   <li>Code reviews</li>
                   <li>Performance reviews</li>
                   <li>Encourage learning and career growth</li>
@@ -103,19 +108,17 @@
 
       <div class="container">
         <div class="portfolio-grid">
-          <a class="portfolio-thumb mt-casethumb" href="/movietickets">
-      <!-- <a class="portfolio-thumb mt-casethumb" id="open-mt" href="#mt-modal"> -->
+          <a class="portfolio-thumb mt-casethumb" href="/movietickets/movietickets.html">
             <img class="mt-casethumb-img" src="/assets/MT-thumb.jpg" />
-            <h5 class="portfolio-thumb-text">Redesign Case Study</h5>
+            <h5 class="portfolio-thumb-text">MovieTickets.com Redesign Case Study</h5>
           </a>
-          <!-- <a class="portfolio-thumb" href="#open-illustrations"> -->
           <a class="portfolio-thumb" id="open-illustrations" href="#animatedModal">
             <img class="mt-casethumb-img illsutration-img" src="/assets/illustrations-thumb.jpg" />
               <h5 class="portfolio-thumb-text  portfolio-thumb-text-side">Illustrations</h5>
           </a>
           <a class="portfolio-thumb" id="open-layouts" href="#layouts-modal">
             <img class="mt-casethumb-img illsutration-img" src="/assets/layouts-thumb.jpg" />
-            <h5 class="portfolio-thumb-text portfolio-thumb-text-side">Print Layouts</h5>
+            <h5 class="portfolio-thumb-text portfolio-thumb-text-side"> Layouts</h5>
           </a>
         </div>
       </div>
@@ -163,7 +166,7 @@
 
   <footer class="footer">
     <h6>
-      Created by Michelle LeBlanc, 2018
+      Custom made with love and code by Michelle LeBlanc, 2018.
     </h6>
   </footer>
 
@@ -172,10 +175,38 @@
   <div id="closebt-container" class="close-animatedModal">
     <img class="closebt" src="assets/closebt.svg" />
   </div>
-
   <div class="modal-content">
-    <h1>Illustrations</h1>
-    <div>Coming Soon!</div>
+    <h2 class="modal-headers">Illustrations</h2>
+    <div class="illustrations-grid">
+      <div>
+        <img alt="Homepage Sketch" src="/assets/illustrations/Tub-and-Cup.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/illustrations/Beach-Bash.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/illustrations/Dip-Into-Honeywell.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/illustrations/Doctoberfest_Standin.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/illustrations/Lexmark-Charms.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/illustrations/Ignite_Logo.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/illustrations/World_Map.jpg" />
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -183,15 +214,55 @@
   <div id="btn-close-modal" class="close-layouts-modal">
     <img class="closebt" src="assets/closebt.svg" />
   </div>
-
   <div class="modal-content">
-    <h1>Layouts</h1>
-    <div>Coming Soon!</div>
+    <h2 class="modal-headers">Layouts</h2>
+    <div class="layouts-grid">
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/HungerGames-Campaign.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/AA_datasheet.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/HEC_0309.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/HEC_0309_2.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/Ignite_Poster.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/Educause1.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/Value_Virtual.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/PC11_56-57.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/PC11_Covers.jpg" />
+      </div>
+
+      <div>
+        <img alt="Homepage Sketch" src="/assets/layouts/Doctoberfest.jpg" />
+      </div>
+
+    </div>
   </div>
 </div>
 
-<!-- <div id="mt-modal">
-  <div id="btn-close-mt-modal" class="close-mt-modal">
+<!-- <div id="layouts-modal">
+  <div id="btn-close-mt-modal" class="close-layouts-modal">
     <img class="closebt" src="assets/closebt.svg" />
   </div>
   <div class="modal-content">
@@ -200,9 +271,29 @@
   </div>
 </div> -->
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="js/animatedModal.min.js"></script>
-  <script src="js/scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type='text/javascript' src='unitegallery/themes/default/ug-theme-default.js'></script>
+<script type='text/javascript' src='unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-functions.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-thumbsgeneral.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-thumbsstrip.js'></script>
+<!-- maybe- check mobile -->
+<script type='text/javascript' src='unitegallery/js/ug-touchthumbs.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-tiles.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-tiledesign.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-avia.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-slider.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-sliderassets.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-touchslider.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-zoomslider.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-video.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-gallery.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-lightbox.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-carousel.js'></script>
+<script type='text/javascript' src='unitegallery/js/ug-api.js'></script>
+
+<script src="js/animatedModal.min.js"></script>
+<script type='text/javascript' src="js/scripts.js"></script>
 
 
 </body>

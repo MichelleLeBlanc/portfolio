@@ -574,15 +574,17 @@ section.intro {
   opacity: 0.5;
 }
 
-.layouts-grid {
+.layouts-grid,
+.illustrations-grid {
   display: grid;
-  grid: auto/repeat(3, 1fr);
-  border: 1px solid blue;
-  margin: 20px;
+  grid: auto/auto;
+  grid-gap: 40px;
 }
-.layouts-grid div img {
+.layouts-grid img,
+.illustrations-grid img {
   width: 100%;
-  border: 1px solid blue;
+  max-width: max-content;
+  height: auto;
 }
 
 .footer {
@@ -1113,9 +1115,10 @@ section.intro {
   text-align: right;
 }
 
-.modal-content img {
-  width: 100%;
-  height: auto;
+.modal-content {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .modal-headers {
   text-align: center;
